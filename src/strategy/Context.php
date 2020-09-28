@@ -4,9 +4,9 @@ namespace Baronet\Strategy;
 
 class Context
 {
-    public function __construct($strategy_ind_id)
+    public function __construct($strategy)
     {
-        switch ($strategy_ind_id) {
+        switch ($strategy) {
             case "C":
                 $this->strategy = new StrategyCaps();
                 break;
@@ -19,7 +19,7 @@ class Context
         }
     }
 
-    public function showBookTitle($book)
+    public function showBookTitle($book): string
     {
         return $this->strategy->showTitle($book);
     }
