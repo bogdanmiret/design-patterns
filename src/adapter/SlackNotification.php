@@ -18,12 +18,14 @@ class SlackNotification implements Notification
      * convert incoming data to the format required by the Adaptee.
      * @param string $title
      * @param string $message
+     * @return string
      */
-    public function send(string $title, string $message): void
+    public function send(string $title, string $message): string
     {
         $slackMessage = "#" . $title . "# " . strip_tags($message);
 
         $this->slack->logIn();
-        $this->slack->sendMessage($this->chatId, $slackMessage);
+
+        return $this->slack->sendMessage($this->chatId, $slackMessage);
     }
 }

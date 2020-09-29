@@ -13,15 +13,15 @@ class SlackApi
         $this->apiKey = $apiKey;
     }
 
-    public function logIn(): void
+    public function logIn(): string
     {
         // Send authentication request to Slack web service.
-        echo "Logged in to a slack account '{$this->login}'.\n";
+        return "Logged in to a slack account '{$this->login}'.\n";
     }
 
-    public function sendMessage(string $chatId, string $message): void
+    public function sendMessage(string $chatId, string $message): string
     {
         // Send message post request to Slack web service.
-        echo "Posted following message into the '$chatId' chat: '$message'.\n";
+        return "Posted following message into the '$chatId' chat: '$message'.\n";
     }
 }

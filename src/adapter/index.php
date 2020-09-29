@@ -6,7 +6,7 @@ require '../../vendor/autoload.php';
 
 function sendNotification(Notification $notification, string $title, string $message)
 {
-    $notification->send($title, $message);
+    echo $notification->send($title, $message);
 }
 
 echo "Client code is designed correctly and works with email notifications:\n";
