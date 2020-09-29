@@ -6,20 +6,20 @@ require '../../vendor/autoload.php';
 
 $book = new Book('Clean Code', 'Robert C Martin');
 
-$strategyContextC = new Context('C');
-$strategyContextE = new Context('E');
-$strategyContextS = new Context('S');
+$strategyContextCaps = new Context('C');
+$strategyContextExclaim = new Context('E');
+$strategyContextStars = new Context('S');
 
 writeln('test 1 - show name context C');
-writeln($strategyContextC->showBookTitle($book));
+writeln($strategyContextCaps->showBookTitle($book));
 writeln('');
 
 writeln('test 2 - show name context E');
-writeln($strategyContextE->showBookTitle($book));
+writeln($strategyContextExclaim->showBookTitle($book));
 writeln('');
 
 writeln('test 3 - show name context S');
-writeln($strategyContextS->showBookTitle($book));
+writeln($strategyContextStars->showBookTitle($book));
 writeln('');
 
 function writeln($line)
