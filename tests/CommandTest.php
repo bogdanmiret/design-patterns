@@ -2,8 +2,6 @@
 
 namespace Tests;
 
-use Baronet\Adapter\SlackApi;
-use Baronet\Adapter\SlackNotification;
 use Baronet\Command\AddMessageDateCommand;
 use Baronet\Command\HelloCommand;
 use Baronet\Command\Invoker;
