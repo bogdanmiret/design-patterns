@@ -4,9 +4,9 @@ namespace Baronet\Factory;
 
 interface Transport
 {
-    public function ready(): void;
+    public function ready(): string;
 
-    public function dispatch(): void;
+    public function dispatch(): string;
 
-    public function deliver(): void;
+    public function deliver(): string;
 }

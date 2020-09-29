@@ -6,11 +6,16 @@ abstract class AbstractCourier
 {
     abstract public function getCourierTransport(): Transport;
 
-    public function sendCourier(): void
+    public function sendCourier(): string
     {
         $transport = $this->getCourierTransport();
-        $transport->ready();
-        $transport->dispatch();
-        $transport->deliver();
+
+        $message = '';
+
+        $message .= $transport->ready();
+        $message .= $transport->dispatch();
+        $message .= $transport->deliver();
+
+        return $message;
     }
 }

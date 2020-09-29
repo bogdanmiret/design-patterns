@@ -6,7 +6,7 @@ require '../../vendor/autoload.php';
 
 function deliverCourier(AbstractCourier $courier)
 {
-    $courier->sendCourier();
+    echo $courier->sendCourier();
 }
 
 echo "Test Courier \n";

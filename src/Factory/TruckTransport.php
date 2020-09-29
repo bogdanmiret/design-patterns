@@ -4,18 +4,18 @@ namespace Baronet\Factory;
 
 class TruckTransport implements Transport
 {
-    public function ready(): void
+    public function ready(): string
     {
-        echo "Courier ready to be sent to the truck \n";
+        return "Courier ready to be sent to the truck \n";
     }
 
-    public function dispatch(): void
+    public function dispatch(): string
     {
-        echo "Courier is on your way on the truck \n";
+        return "Courier is on your way on the truck \n";
     }
 
-    public function deliver(): void
+    public function deliver(): string
     {
-        echo "Courier from the truck is delivered to you \n";
+        return "Courier from the truck is delivered to you \n";
     }
 }
